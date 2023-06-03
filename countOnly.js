@@ -18,7 +18,6 @@ const countOnly = function(allItems, itemsToCount) {
             newObj[item] = newObj[item] + 1;
         }
     }
-    console.log(newObj)
     return newObj;
 }
 
