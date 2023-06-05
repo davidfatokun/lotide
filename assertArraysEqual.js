@@ -9,3 +9,5 @@ const assertEqualArrays = function(first, second) {
     }
     console.log(result);
 };
+
+module.exports = assertEqualArrays;

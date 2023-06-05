@@ -1,31 +1,3 @@
-const assertEqual = function(actual, expected) {
-  let result = `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
-  if (actual === expected) {
-    result = `✅✅✅ Assertion Passed: ${actual} === ${expected}`;
-  }
-  console.log(result);
-};
-
-const eqArrays = function(first, second) {
-  let result = true;
-  for (let i = 0; i < first.length; i++) {
-    if (!(first[i] === second[i])) {
-      result = false;
-    }
-  }
-  return result;
-};
-
-const assertEqualArrays = function(first, second) {
-  let result = `✅✅✅ Assertion Passed: ${first} === ${second}`;
-  for (let i = 0; i < first.length; i++) {
-    if (!(first[i] === second[i])) {
-      result = `🛑🛑🛑 Assertion Failed: ${first} !== ${second}`;
-    }
-  }
-  console.log(result);
-};
-
 const middle = function(arr){
   if(arr.length < 3) return []
   let newArray = arr.sort();
@@ -38,16 +10,5 @@ const middle = function(arr){
   }
   return result;
 }
-assertEqualArrays(middle([1]), [])
-assertEqualArrays(middle([1,2]), [])
-assertEqualArrays(middle([1,2,3]), [2])
-assertEqualArrays(middle([1,2,3,4,5]), [3])
-assertEqualArrays(middle([1, 2, 3, 4]), [2, 3])
-assertEqualArrays(middle([1, 2, 3, 4, 5, 6]), [3, 4])
 
-assertEqual(eqArrays(middle([1]), []), true)
-assertEqual(eqArrays(middle([1,2]), []), true)
-assertEqual(eqArrays(middle([1,2,3]), [2]), true)
-assertEqual(eqArrays(middle([1,2,3,4,5]), [3]), true)
-assertEqual(eqArrays(middle([1, 2, 3, 4]), [2, 3]), true)
-assertEqual(eqArrays(middle([1, 2, 3, 4, 5, 6]), [3, 4]), true)
+module.exports = middle;
